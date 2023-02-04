@@ -1,6 +1,6 @@
 syntax keyword borTodos   TODO XX FIXME NOTE
 syntax keyword borBoolean true false
-syntax match   borComment "//.*$"
+syntax match   borComment "\$.*$"
 
 " Match language specific keywords
 syntax keyword borKeywords
