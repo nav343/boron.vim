@@ -12,6 +12,8 @@ syntax keyword borKeywords
 syntax keyword borNativeFn
       \ TIME
       \ writeFile
+      \ readFile
+      \ clearScr
       \ print
 
 " Match all Boron number types
@@ -19,7 +21,7 @@ syntax match borNumber "\v<\d+>"
 syntax match borNumber "\v<\d+\.\d+>"
 syntax match borFnCall "[a-zA-Z][a-zA-Z0-9_]*\([a-zA-Z0-9_]*\)"
 
-syntax region borString start=/"/ skip=/\\"/ end=/"/ oneline contains=borInterpolatedWrapper
+syntax region borString start=/"/ skip=/\\"/ end=/"/ contains=borInterpolatedWrapper
 syntax region borInterpolatedWrapper start="\v\\\(\s*" end="\v\s*\)" contained containedin=borString contains=borInterpolatedString
 syntax match  borInterpolatedString "\v\w+(\(\))?" contained containedin=borInterpolatedWrapper
 
