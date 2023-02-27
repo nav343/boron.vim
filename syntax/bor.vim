@@ -1,5 +1,5 @@
 syntax keyword borTodos   TODO XX FIXME NOTE
-syntax keyword borBoolean true false
+syntax keyword borBoolean true false null
 syntax match   borComment "\$.*$"
 
 " Match language specific keywords
@@ -8,6 +8,8 @@ syntax keyword borKeywords
       \ const
       \ func
       \ if
+      \ else
+      \ while
 
 syntax keyword borNativeFn
       \ TIME
@@ -15,6 +17,9 @@ syntax keyword borNativeFn
       \ readFile
       \ clearScr
       \ print
+      \ typeof
+      \ input
+      \ getPass
 
 " Match all Boron number types
 syntax match borNumber "\v<\d+>"
